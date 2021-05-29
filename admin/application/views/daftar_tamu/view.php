@@ -19,6 +19,7 @@
                     </form>
                 </div>
             </div>
+            <center>
             <div class="box-body table-responsive no-padding">
                 <table class="table table-hover">
                     <tbody>
@@ -40,7 +41,7 @@
                     <tbody>
 
                     </tbody>
-
+                </center>
                    
                     <?php
                     $no = 0;

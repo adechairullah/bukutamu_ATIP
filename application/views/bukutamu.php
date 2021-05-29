@@ -82,6 +82,15 @@
 						<label for="">NIK</label>
 						<input type="number" placeholder="Masukkan NIK" class="form-control" name="nik" id="nik" required autocomplete="off">
 					</div>
+
+					<div class="form-group">
+					<?php if (!empty($daftar_tamu)) $jk = $daftar_tamu->jekel;
+                        else $jk = ""; ?>
+                        <select name="jekel" id="jekel" class="form-control">
+                        	<option value="L" <?php if ($jk == "L") echo "selected"; ?>>Laki-Laki</option>
+                        	<option value="P" <?php if ($jk == "P") echo "selected"; ?>>Perempuan </option>
+                        </select>
+					</div>
 				
 					<div class="form-group">
 						<label for="">Instansi</label>
@@ -90,7 +99,7 @@
 					
 					<div class="form-group">
 						<label for="">No. Telepon</label>
-						<input type="number" placeholder="081xxxxxx" class="form-control" name="nomor_telp" id="nomor_telp" required autocomplete="off">
+						<input type="number" placeholder="+628xxxxxxx" class="form-control" name="nomor_telp" id="nomor_telp" required autocomplete="off">
 					</div>
 					<div class="form-group">
 						<label for="">Alamat</label>
@@ -131,7 +140,7 @@
 			event.preventDefault();
 			var image = '';
 			var nama = $('#nama').val();
-		//	var nama = $('#jekel').val();
+			var jekel = $('#jekel').val();
 			var nik = $('#nik').val();
 			var instansi = $('#instansi').val();
 			var nomor_telp = $('#nomor_telp').val();
@@ -145,7 +154,7 @@
 				url: '<?php echo site_url("bukutamu/simpan");?>',
 				type: 'POST',
 				dataType: 'json',
-				data: {nama: nama, nik: nik, instansi: instansi,nomor_telp:nomor_telp,alamat:alamat,keperluan:keperluan,image:image},
+				data: {nama: nama, nik: nik, jekel:jekel, instansi: instansi,nomor_telp:nomor_telp,alamat:alamat,keperluan:keperluan,image:image},
 			})
 			.done(function(data) {
 				if (data > 0) {

@@ -32,7 +32,7 @@
             </span>
           </a>
         </li>
-        <li><a href="http://localhost/bukutamu_ATIP/login/logout"><i class="fa fa-circle-o text-aqua"></i> <span>Logout</span></a></li>
+        <li><a href="http://localhost/bukutamu_ATIP/admin/login/logout"><i class="fa fa-circle-o text-aqua"></i> <span>Logout</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->

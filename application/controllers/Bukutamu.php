@@ -20,10 +20,10 @@ class Bukutamu extends CI_Controller {
 		$nama = $this->input->post('nama', true);
 		$tanggal = date("Y-m-d H:i:s");
 		$nik = $this->input->post('nik', true);
-		//$jekel = $this->input->post('jekel', true);
+		$jekel = $this->input->post('jekel', true);
 		$instansi = $this->input->post('instansi', true);
 		$nomor_telp = $this->input->post('nomor_telp', true);
-		$alamat = $this->input->post('instansi', true);
+		$alamat = $this->input->post('alamat', true);
 		$keperluan = $this->input->post('keperluan', true);	
 		$image = $this->input->post('image');
 		$image = str_replace('data:image/jpeg;base64,','', $image);
@@ -34,7 +34,7 @@ class Bukutamu extends CI_Controller {
 		$data = array(
 			'nama' => $nama,
 			'tanggal' =>$tanggal,
-			//'jekel' =>$jekel,
+			'jekel' =>$jekel,
 			'nik' => $nik,
 			'instansi' => $instansi,
 			'nomor_telp' => $nomor_telp,
