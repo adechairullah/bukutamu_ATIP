@@ -131,6 +131,7 @@
 			event.preventDefault();
 			var image = '';
 			var nama = $('#nama').val();
+		//	var nama = $('#jekel').val();
 			var nik = $('#nik').val();
 			var instansi = $('#instansi').val();
 			var nomor_telp = $('#nomor_telp').val();
@@ -150,7 +151,7 @@
 				if (data > 0) {
 					alert('Data Berhasil Disimpan');
 					$('#simpan')[0].reset();
-				    setInterval( () => { window.location.href = "https://bukutamu.poltekatipdg.ac.id/";
+				    setInterval( () => { window.location.href = "http://localhost/bukutamu_ATIP";
 				        
 				    }, 500);
 				}

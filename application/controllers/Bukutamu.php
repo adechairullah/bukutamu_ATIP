@@ -20,6 +20,7 @@ class Bukutamu extends CI_Controller {
 		$nama = $this->input->post('nama', true);
 		$tanggal = date("Y-m-d H:i:s");
 		$nik = $this->input->post('nik', true);
+		//$jekel = $this->input->post('jekel', true);
 		$instansi = $this->input->post('instansi', true);
 		$nomor_telp = $this->input->post('nomor_telp', true);
 		$alamat = $this->input->post('instansi', true);
@@ -29,10 +30,11 @@ class Bukutamu extends CI_Controller {
 		$image = base64_decode($image);
 		$filename = 'tamu_'.date('dmY_His').'.png';
 		
-		file_put_contents(FCPATH.'/uploads/'.$filename,$image);
+		file_put_contents(FCPATH.'/admin/uploads/'.$filename,$image);
 		$data = array(
 			'nama' => $nama,
 			'tanggal' =>$tanggal,
+			//'jekel' =>$jekel,
 			'nik' => $nik,
 			'instansi' => $instansi,
 			'nomor_telp' => $nomor_telp,

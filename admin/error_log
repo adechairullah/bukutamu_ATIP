@@ -1,0 +1,2 @@
+[20-May-2021 12:08:56 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '$val' (T_VARIABLE) in /home/atipacid/public_html/bukutamu/application/views/bukutamu.php on line 84
+[20-May-2021 13:14:43 Asia/Jakarta] PHP Fatal error:  Call to a member function get() on null in /home/atipacid/public_html/bukutamu/application/controllers/Bukutamu.php on line 13

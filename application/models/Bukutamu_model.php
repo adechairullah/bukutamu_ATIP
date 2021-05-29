@@ -15,10 +15,13 @@ class Bukutamu_model extends CI_Model {
 		$this->db->insert('daftar_tamu', $data);
 		return $this->db->insert_id();
 	}
-	
 
-	
+	 	
 }
 
 /* End of file User.php */
 /* Location: ./application/models/User.php */
+
+
+
+   
